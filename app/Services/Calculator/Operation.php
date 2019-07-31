@@ -16,4 +16,6 @@ class Operation
     const MINIMAL = 'min';
     const MULTIPLICATION = 'multipl';
     const SUBTRACTION = 'subtract';
+    const GREATEST_COMMON_DIVISOR = 'gcd';
+    const LIST_COMMON_MULTIPLE = 'lcm';
 }

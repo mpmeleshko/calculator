@@ -40,6 +40,8 @@
                             <option value="average">avg</option>
                             <option value="max">max</option>
                             <option value="min">min</option>
+                            <option value="gcd">gcd</option>
+                            <option value="lcm">lcm</option>
                         </select>
                     </div>
                     <div class="col">

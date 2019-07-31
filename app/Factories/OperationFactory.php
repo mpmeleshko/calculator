@@ -8,6 +8,8 @@ use App\Services\Calculator\Operations\Addition;
 use App\Services\Calculator\Operations\Average;
 use App\Services\Calculator\Operations\Division;
 use App\Services\Calculator\Operations\Exponentiation;
+use App\Services\Calculator\Operations\GreatestCommonDivisor;
+use App\Services\Calculator\Operations\ListCommonMultiple;
 use App\Services\Calculator\Operations\Maximal;
 use App\Services\Calculator\Operations\Minimal;
 use App\Services\Calculator\Operations\Multiplication;
@@ -48,6 +50,12 @@ class OperationFactory
                 break;
             case Operation::SUBTRACTION:
                 $operation = app()->make(Subtraction::class);
+                break;
+            case Operation::GREATEST_COMMON_DIVISOR:
+                $operation = app()->make(GreatestCommonDivisor::class);
+                break;
+            case Operation::LIST_COMMON_MULTIPLE:
+                $operation = app()->make(ListCommonMultiple::class);
                 break;
             default:
                 $operation = null;

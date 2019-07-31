@@ -22,11 +22,22 @@ class Calculator implements ICalculator
         $this->IValue = $IValue;
     }
 
+    /**
+     * Calculate values based on operation
+     *
+     * @param $data
+     * @return mixed
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
     public function process($data)
     {
         $this->IValue->setValues($data);
 
         $operation = OperationFactory::createOperationMethod($data['operation']);
+
+        if(empty($operation)) {
+            throw new \Exception('Operation not found.');
+        }
 
         $result = $operation->calculate($this->IValue->getValues());
 

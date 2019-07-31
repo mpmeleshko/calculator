@@ -14,7 +14,7 @@ class Division implements IOperation
     public function calculate(array $values)
     {
         if (empty($values['secondValue'])) {
-            throw new \Exception('You can\'t divide by zero');
+            throw new \Exception('Can\'t divide by zero');
         }
 
         return $values['firstValue'] / $values['secondValue'];
